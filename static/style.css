@@ -22,7 +22,7 @@
     justify-content: center;
 }
 
-button {
+#start {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,13 +32,13 @@ button {
     height: 100px;
     border-radius: 50%;
     font-size: 50px;
-    background-color: skyblue;
+    background-color: rgb(1, 181, 255);
 }
 
 td {
-    font-size: 75px;
-    padding: 7px;
-    border: 5px;
+    font-size: 50px;
+    padding: 5px;
+    border: 3px;
     text-align: center;
     border-style: solid;
     border-color: blue;
@@ -47,8 +47,25 @@ td {
 }
 
 table {
-    margin-top: 75px;
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     background-color: blue;
+}
+
+.guess-prompt {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#guess-label {
+    margin-right: 4px;
+}
+
+body {
+    background-color: lightskyblue;
 }
