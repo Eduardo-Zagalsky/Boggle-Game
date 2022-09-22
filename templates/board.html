@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <table>
         {% for row in board %}
         <tr>
@@ -19,11 +20,15 @@
         </tr>
         {% endfor %}
     </table>
-    <section class="guess-prompt">
+
+    <form method="POST" class="guess-prompt">
         <label for="guess" id="guess-label">Word: </label>
-        <input type="text" name="guess">
+        <input type="text" name="guess" id="guess">
         <button type="submit" id="guess-button">Guess</button>
-    </section>
+    </form>
+
+    <script src="/static/logic.js"></script>
+
 </body>
 
 </html>
