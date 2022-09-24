@@ -23,12 +23,14 @@
 
     <form method="POST" class="guess-prompt">
         <label for="guess" id="guess-label">Word: </label>
-        <input type="text" name="guess" id="guess">
+        <input type="text" name="word" id="word">
         <button type="submit" id="guess-button">Guess</button>
     </form>
-
+    <section>
+        <ul></ul>
+    </section>
     <script src="/static/logic.js"></script>
-
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
 </body>
 
 </html>
