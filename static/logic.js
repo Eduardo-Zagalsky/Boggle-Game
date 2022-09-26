@@ -1,6 +1,8 @@
 const ul = document.querySelector("ul");
 let gbutton = document.getElementById("guess-button");
 let allTd = document.querySelectorAll("td");
+let time = document.getElementById("time");
+startTime = 60;
 gbutton.addEventListener("click", async function (event) {
     event.preventDefault();
     let input = document.getElementById("word");
@@ -35,3 +37,12 @@ for (let y = 0; y < 5; y++) {
     };
 };
 
+let timer = setInterval(() => {
+    time.innerText = startTime;
+    if (startTime == 0) {
+        input.value = '';
+        gbutton.removeEventListener();
+        clearInterval(timer)
+    }
+    startTime--;
+}, 1000)
