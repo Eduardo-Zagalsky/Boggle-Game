@@ -69,3 +69,8 @@ table {
 body {
     background-color: lightskyblue;
 }
+
+.selected {
+    background-color: yellow;
+    border-radius: 50%;
+}
