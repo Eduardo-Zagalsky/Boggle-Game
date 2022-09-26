@@ -15,7 +15,6 @@ gbutton.addEventListener("click", async function (event) {
         let li = document.createElement("li");
         li.innerText = word.toUpperCase();
         input.value = '';
-        allTd.className = '';
         ul.append(li);
     }
 
@@ -35,3 +34,4 @@ for (let y = 0; y < 5; y++) {
             });
     };
 };
+
