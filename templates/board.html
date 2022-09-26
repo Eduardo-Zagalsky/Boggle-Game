@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <section>
+        <h1>Time Remaining: </h1>
+        <h1 id="time"></h1>
+    </section>
 
     <table>
         {% for row in board %}
@@ -26,6 +30,10 @@
         <input type="text" name="word" id="word">
         <button type="submit" id="guess-button">Guess</button>
     </form>
+    <section>
+        <h6>High score:{{score}}</h6>
+        <h6>Score:</h6>
+    </section>
     <section>
         <ul></ul>
     </section>
