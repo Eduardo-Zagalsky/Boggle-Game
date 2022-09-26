@@ -1,5 +1,6 @@
 const ul = document.querySelector("ul");
 let gbutton = document.getElementById("guess-button");
+let allTd = document.querySelectorAll("td");
 gbutton.addEventListener("click", async function (event) {
     event.preventDefault();
     let input = document.getElementById("word");
@@ -14,12 +15,23 @@ gbutton.addEventListener("click", async function (event) {
         let li = document.createElement("li");
         li.innerText = word.toUpperCase();
         input.value = '';
+        allTd.className = '';
         ul.append(li);
     }
 
 });
-const allTd = document.querySelectorAll("td");
 
+for (let y = 0; y < 5; y++) {
+    for (let x = 0; x < 5; x++) {
+        allTd[x + (5 * y)].setAttribute("id", `${y}-${x}`);
+    };
+};
 
-// click letters to highlight and add table for words that have already been used
-// delete box when guess is done
+for (let y = 0; y < 5; y++) {
+    for (let x = 0; x < 5; x++) {
+        document.getElementById(`${y}-${x}`)
+            .addEventListener("click", function (e) {
+                e.target.setAttribute("class", "selected");
+            });
+    };
+};
